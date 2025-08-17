@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Competences
 
 # Create your views here.
-def accueil(request):
-    return render(request, 'portfolio_app/index.html')
+def portfolio_onepage(request):
+    competences = Competences.objects.all()
+    return render(request, 'portfolio_app/index.html', context={'competences': competences})

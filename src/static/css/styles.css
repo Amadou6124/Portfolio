@@ -66,7 +66,7 @@
            3. Section Accueil
            ==================================== */
         #accueil {
-            background-image: url('/zimg/montagne.jpg');
+            background-image: url('/src/static/img/montagne.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -102,3 +102,44 @@
             color: var(--rose-principal);
             border-color: var(--couleur-texte-clair);
         }
+
+
+
+/*
+        5. Section Compétences
+           ==================================== */
+        #competences {
+            background-color: var(--couleur-principale-foncee);
+        }
+        .skill-item img {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        .skill-item:hover img {
+            transform: scale(1.1);
+        }
+        .certification-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .certification-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .certification-img {
+            object-fit: cover;
+            height: 200px;
+        }
+        .certification-card .card-body {
+            min-height: 100px;
+            background-color: #333;
+            color: white;
+        }
+        .certification-card .card-title {
+            color: var(--rose-principal);
+        }
+        .certification-card a {
+            text-decoration: none;
+        }
+        
