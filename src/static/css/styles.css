@@ -141,3 +141,22 @@
         .certification-card a {
             text-decoration: none;
         }
+
+/*
+        4. Section Projets
+           ==================================== */
+        #projets {
+            background-color: var(--couleur-principale-foncee);
+        }
+        .carousel-img {
+            height: 60vh;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+        .carousel-caption h5 {
+            color: var(--rose-principal);
+            font-weight: bold;
+        }

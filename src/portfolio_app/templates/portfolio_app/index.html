@@ -55,4 +55,56 @@
 
 
 <!-- Fin de Page de Competences -->
+
+<!--   Section projet -->
+
+
+<section id="projets">
+    <div class="container">
+        <h2 class="text-center mb-2">Mes Projets</h2>
+        <p class="text-center lead mb-5">Explorez mes projets les plus récents et apprenez-en plus sur les technologies que j'utilise au quotidien.</p>
+        
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <!-- Boucle pour générer les indicateurs du carrousel -->
+                {% for projet in projets %}
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="{{ forloop.counter0 }}" 
+                        class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% endif %}" 
+                        aria-label="Slide {{ forloop.counter }}"></button>
+                {% endfor %}
+            </div>
+            
+            <div class="carousel-inner">
+                <!-- Boucle pour générer les éléments du carrousel -->
+                {% for projet in projets %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <!-- Utilise l'URL de l'image du modèle -->
+                    <img src="{{ projet.image_carousel.url }}" class="d-block w-100 carousel-img" alt="{{ projet.titre }}">
+                    <div class="carousel-caption d-md-block text-center bg-black bg-opacity-50 py-3 rounded">
+                        <h5 class="fw-bold">{{ projet.titre }}</h5>
+                        <p class="d-none d-sm-block">{{ projet.description }}</p>
+                        <!-- Utilise le lien GitHub du modèle -->
+                        <a href="{{ projet.lien_github }}" class="btn btn-outline-light mt-2" target="_blank">
+                            <i class="fab fa-github me-2"></i>Voir sur GitHub
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+<!--  Fin de Section projet -->
 {% endblock %}
