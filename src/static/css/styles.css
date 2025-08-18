@@ -133,7 +133,6 @@
         }
         .certification-card .card-body {
             min-height: 100px;
-            background-color: #333;
             color: white;
         }
         .certification-card .card-title {
@@ -142,4 +141,3 @@
         .certification-card a {
             text-decoration: none;
         }
-        
