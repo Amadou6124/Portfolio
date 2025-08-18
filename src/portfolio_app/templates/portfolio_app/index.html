@@ -11,10 +11,10 @@
 
 <section id="accueil" class="vh-100 text-center">
     <div class="content">
-        <img src="#" alt="Amadou Sy" class="rounded-circle profile-photo mb-4">
+        <img src="{% static 'img/montagne.jpg' %}" alt="Amadou Sy" class="rounded-circle profile-photo mb-4">
         <h1 class="display-4 fw-bold text-rose">Amadou Sy</h1>
         <p class="lead">Développeur Web & Django junior</p>
-        <a href="#" class="btn btn-outline-light mt-3">Voir mes projets</a>
+        <a href="#projets" class="btn btn-outline-light mt-3">Voir mes projets</a>
     </div>
 </section>
 
@@ -25,6 +25,8 @@
 
 <section id="competences">
     <div class="container text-center">
+        <h1>Mes competences</h1>
+        <p class="lead">Au cours de mes études, j'ai acquis les compétences suivantes :</p>
         <div class="row g-4 mb-5 justify-content-center">
             {% for competence in competences %}
             <div class="col-6 col-md-4 col-lg-2 skill-item">
