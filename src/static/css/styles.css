@@ -160,3 +160,31 @@
             color: var(--rose-principal);
             font-weight: bold;
         }
+
+
+
+        /* ====================================
+           6. Section Contact
+           ==================================== */
+        #contact {
+            background-color: var(--couleur-principale-foncee);
+        }
+        .btn-contact {
+            background-color: var(--rose-principal);
+            color: var(--couleur-texte-clair);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-contact:hover {
+            background-color: #d81b60;
+        }
+        .social-icon-btn {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
