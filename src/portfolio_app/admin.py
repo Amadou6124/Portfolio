@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Certificat, Competences
+from .models import Certificat, Competences, Projet
 
 # Register your models here.
 
@@ -10,4 +10,8 @@ class CompetenceAdmin(admin.ModelAdmin):
 
 @admin.register(Certificat)
 class CertificatAdmin(admin.ModelAdmin):
+    list_display = ['titre']
+
+@admin.register(Projet)
+class ProjetAdmin(admin.ModelAdmin):
     list_display = ['titre']
