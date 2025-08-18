@@ -21,3 +21,17 @@ class Certificat(models.Model):
 
     def __str__(self):
         return self.titre 
+    
+
+class Projet(models.Model):
+    titre = models.CharField(max_length=100)
+    description = models.TextField()
+    image_carousel = models.ImageField(upload_to='projets/carousels/')
+    lien_github = models.URLField()
+    est_principal = models.BooleanField(default=False)
+    
+    class Meta:
+        verbose_name = "Projet"
+    
+    def __str__(self):
+        return self.titre
