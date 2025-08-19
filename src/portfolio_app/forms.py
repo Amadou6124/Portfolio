@@ -3,7 +3,6 @@ from .models import Contact
 
 class ContactForm(forms.ModelForm):
 
-    # Ajoute les classes CSS aux widgets
     nom = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'})
     )
